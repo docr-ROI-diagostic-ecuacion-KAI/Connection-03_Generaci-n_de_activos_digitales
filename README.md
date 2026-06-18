@@ -1,12 +1,22 @@
 # Connection 03 - Generación de activos digitales
 
-Este repositorio contiene la píldora WordPress de Doc ROI para la Connection 03: **Generación de activos digitales**.
+Este repositorio contiene la píldora Doc ROI para la Connection 03: **Generación de activos digitales**.
 
-## Archivo incluido
+## Archivos incluidos
 
+- `index.html`: página de entrada para desplegar correctamente en Vercel.
 - `connection_03_activos_digitales_pildora_wordpress.txt`: bloque HTML listo para pegar en WordPress como bloque HTML personalizado.
 
-## Uso
+## Uso en Vercel
+
+1. Importar este repositorio en Vercel.
+2. Mantener el directorio raíz como `./`.
+3. No configurar comando de build.
+4. Publicar el proyecto.
+
+Vercel servirá `index.html` como página principal.
+
+## Uso en WordPress
 
 1. Abrir el archivo `.txt`.
 2. Copiar todo el contenido.
