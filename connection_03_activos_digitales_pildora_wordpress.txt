@@ -29,6 +29,10 @@
 .docroi-field input,.docroi-field textarea{width:100%;border:1px solid #CBD5E1;background:#fff;border-radius:14px;padding:13px 14px;font-size:14px;line-height:1.45;color:#111827;outline:none;font-family:Inter,Helvetica,Arial,sans-serif!important}
 .docroi-field textarea{min-height:112px;resize:vertical}
 .docroi-field input:focus,.docroi-field textarea:focus{border-color:#003B5C;box-shadow:0 0 0 3px rgba(0,59,92,.12)}
+.docroi-checks{display:grid;grid-template-columns:1fr;gap:10px;margin:4px 0 2px}
+.docroi-check{display:flex;gap:10px;align-items:flex-start;background:#F8FAFC;border:1px solid #E5E7EB;border-radius:16px;padding:14px;color:#0B0F19;font-size:14px;line-height:1.45;font-weight:800}
+.docroi-check input{width:18px;height:18px;margin:1px 0 0;accent-color:#003B5C;flex:0 0 auto}
+.docroi-check span{display:block;color:#5B6472;font-weight:600;font-size:13px;margin-top:3px}
 .docroi-prompt-frame{background:#0B0F19;border-radius:28px;padding:14px;border:1px solid rgba(11,15,25,.88);box-shadow:0 22px 58px rgba(11,15,25,.18)}
 .docroi-prompt-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#fff;padding:8px 10px 18px}
 .docroi-prompt-top strong{color:#fff!important;font-size:14px;text-transform:uppercase;letter-spacing:.06em}
@@ -37,7 +41,7 @@
 .docroi-actions{display:grid;grid-template-columns:1fr;gap:12px;margin-top:18px}
 .docroi-status{margin-top:12px;min-height:24px;font-size:14px;line-height:1.5;font-weight:900;color:#D8ECF8}
 .docroi-note{background:#EAF6FB;border:1px solid #D8ECF8;border-radius:20px;padding:18px;color:#003B5C;font-weight:800;line-height:1.65;margin-top:18px}
-@media(min-width:769px){.docroi-section{padding:76px 24px}.docroi-grid{grid-template-columns:1fr 1fr}.docroi-form{grid-template-columns:1fr 1fr}.docroi-full{grid-column:1/-1}.docroi-actions{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:769px){.docroi-section{padding:76px 24px}.docroi-grid{grid-template-columns:1fr 1fr}.docroi-form{grid-template-columns:1fr 1fr}.docroi-full{grid-column:1/-1}.docroi-actions{grid-template-columns:repeat(3,minmax(0,1fr))}.docroi-checks{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.docroi-logo-frame img{height:54px}.docroi-card{padding:22px}.docroi-prompt-box{min-height:420px;font-size:12px;padding:16px}}
 </style>
 
@@ -50,12 +54,12 @@
       </a>
       <span style="display:inline-block;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);color:#D8ECF8;border-radius:999px;padding:10px 16px;font-size:12px;font-weight:900;letter-spacing:.06em;margin-bottom:22px;">CONNECTION 03 · GENERACIÓN DE ACTIVOS DIGITALES</span>
       <h1>Connection 03 · Generación de activos digitales</h1>
-      <p>Convierte una idea formativa o profesional en un activo digital con estructura, propósito y valor reutilizable. Todo se resuelve pegando la información en esta página: datos del proyecto, buyer persona, contacto, colores y enlaces.</p>
+      <p>Convierte una idea formativa o profesional en un activo digital con estructura, propósito y valor reutilizable. Puedes trabajar pegando la información en el formulario o indicando que adjuntarás la ficha y el logo al conversar con la IA.</p>
     </div>
     <div class="docroi-card">
       <span class="docroi-chip">Píldora Doc ROI</span>
       <h2>Del conocimiento disperso al activo digital descargable.</h2>
-      <p class="docroi-muted">Rellena los campos, genera el prompt personalizado y pégalo en ChatGPT o Gemini. No hace falta añadir nada más: el prompt llevará toda la información escrita aquí.</p>
+      <p class="docroi-muted">Rellena los campos, marca si vas a adjuntar buyer persona o logo, genera el prompt personalizado y pégalo en ChatGPT o Gemini junto con esos archivos si has elegido esa opción.</p>
       <div style="display:grid;gap:10px;margin-top:18px">
         <a href="#constructor-prompt" class="docroi-btn docroi-btn-dark">Rellenar campos →</a>
         <a href="https://buyer-persona-three.vercel.app/" target="_blank" rel="noopener noreferrer" class="docroi-btn docroi-btn-blue">Crear ficha buyer persona →</a>
@@ -69,14 +73,14 @@
   <div class="docroi-wrap">
     <div style="max-width:860px;margin:0 auto 34px;text-align:center">
       <span class="docroi-chip">Solución funcional</span>
-      <h2>Rellena, genera y copia</h2>
-      <p class="docroi-muted">El formulario no envía datos a ningún servidor. Solo construye el prompt dentro de esta página. El alumno pega el buyer persona y los datos del proyecto, y obtiene un encargo completo para crear su landing page.</p>
+      <h2>Elige cómo entregar la información</h2>
+      <p class="docroi-muted">La página no sube ni envía archivos. Solo genera el prompt. Si el alumno va a adjuntar la ficha o el logo directamente en ChatGPT o Gemini, debe marcarlo para que el prompt lo indique con claridad.</p>
     </div>
     <div class="docroi-grid">
-      <div class="docroi-card"><h3>1. Completar datos</h3><p class="docroi-muted">Nombre, colores, contacto, email RGPD, URL del logo, mapa y buyer persona.</p></div>
-      <div class="docroi-card"><h3>2. Generar prompt</h3><p class="docroi-muted">La página inserta esos datos en un prompt maestro listo para usar.</p></div>
-      <div class="docroi-card"><h3>3. Crear el activo</h3><p class="docroi-muted">El alumno pega el prompt en su IA y recibe una landing page completa en HTML, CSS y JavaScript.</p></div>
-      <div class="docroi-card"><h3>4. Reutilizar</h3><p class="docroi-muted">Puede cambiar textos, colores, soluciones, blog, contacto y mapa para adaptar el resultado.</p></div>
+      <div class="docroi-card"><h3>1. Buyer persona</h3><p class="docroi-muted">Puede pegar el contenido en el campo o marcar que adjuntará la ficha creada en la píldora 2.</p></div>
+      <div class="docroi-card"><h3>2. Logo</h3><p class="docroi-muted">Puede pegar una URL del logo o marcar que adjuntará el archivo de logo en el chat de IA.</p></div>
+      <div class="docroi-card"><h3>3. Generar prompt</h3><p class="docroi-muted">El prompt cambia automáticamente según las casillas seleccionadas.</p></div>
+      <div class="docroi-card"><h3>4. Crear el activo</h3><p class="docroi-muted">El alumno pega el prompt en su IA y obtiene una landing page completa en HTML, CSS y JavaScript.</p></div>
     </div>
   </div>
 </section>
@@ -86,25 +90,29 @@
     <div>
       <span class="docroi-chip">Constructor del prompt</span>
       <h2>Personaliza la píldora antes de copiar</h2>
-      <p class="docroi-muted">Pega la información en los campos. Si falta algún dato, el prompt pedirá que se marque como [PENDIENTE] para no inventar.</p>
-      <div class="docroi-note">Importante: esta versión funciona sin subida de documentos. La ficha de buyer persona debe copiarse y pegarse en el campo correspondiente.</div>
+      <p class="docroi-muted">Marca primero si vas a adjuntar la ficha de buyer persona o el logo al chat de IA. Si no marcas esas opciones, el prompt usará lo que escribas en los campos.</p>
+      <div class="docroi-note">Puedes crear o recuperar la ficha de buyer persona aquí: <a href="https://buyer-persona-three.vercel.app/" target="_blank" rel="noopener noreferrer" style="color:#003B5C;font-weight:900">buyer-persona-three.vercel.app</a></div>
       <div class="docroi-card" style="margin-top:18px">
+        <div class="docroi-checks docroi-full">
+          <label class="docroi-check"><input id="docroiAdjuntaBuyer" type="checkbox" onchange="docroiBuildPrompt()"><div>Adjuntaré la ficha buyer persona de la píldora 2<span>El prompt pedirá a la IA que analice el documento adjunto. Puedes añadir un resumen breve en el campo de buyer persona para orientar.</span></div></label>
+          <label class="docroi-check"><input id="docroiAdjuntaLogo" type="checkbox" onchange="docroiBuildPrompt()"><div>Adjuntaré el logo en el chat de IA<span>El prompt pedirá a la IA que use el archivo de logo adjunto. Si no marcas esto, usa la URL del logo.</span></div></label>
+        </div>
         <div class="docroi-form">
-          <div class="docroi-field"><label for="docroiNombre">Nombre de empresa / producto / servicio</label><input id="docroiNombre" type="text" placeholder="Ej.: Academia Nova, Clínica X, Servicio Y"></div>
-          <div class="docroi-field"><label for="docroiColorPrincipal">Color principal</label><input id="docroiColorPrincipal" type="text" value="#003B5C" placeholder="#003B5C"></div>
-          <div class="docroi-field"><label for="docroiColorSecundario">Color secundario</label><input id="docroiColorSecundario" type="text" value="#D8ECF8" placeholder="#D8ECF8"></div>
-          <div class="docroi-field"><label for="docroiEmail">Email RGPD</label><input id="docroiEmail" type="email" placeholder="contacto@empresa.com"></div>
-          <div class="docroi-field docroi-full"><label for="docroiContacto">Datos de contacto</label><textarea id="docroiContacto" placeholder="Teléfono, email, dirección, persona de contacto..."></textarea></div>
-          <div class="docroi-field docroi-full"><label for="docroiLogo">URL del logo</label><input id="docroiLogo" type="url" placeholder="https://.../logo.png"></div>
-          <div class="docroi-field docroi-full"><label for="docroiMaps">URL Google Maps</label><input id="docroiMaps" type="url" placeholder="https://maps.google.com/..."></div>
-          <div class="docroi-field docroi-full"><label for="docroiBuyer">Buyer persona / ficha Doc ROI</label><textarea id="docroiBuyer" style="min-height:190px" placeholder="Pega aquí el contenido principal del buyer persona: perfil, pains, gains, objeciones, motivaciones, canales, keywords y contenidos recomendados."></textarea></div>
+          <div class="docroi-field"><label for="docroiNombre">Nombre de empresa / producto / servicio</label><input id="docroiNombre" type="text" oninput="docroiBuildPrompt()" placeholder="Ej.: Academia Nova, Clínica X, Servicio Y"></div>
+          <div class="docroi-field"><label for="docroiColorPrincipal">Color principal</label><input id="docroiColorPrincipal" type="text" oninput="docroiBuildPrompt()" value="#003B5C" placeholder="#003B5C"></div>
+          <div class="docroi-field"><label for="docroiColorSecundario">Color secundario</label><input id="docroiColorSecundario" type="text" oninput="docroiBuildPrompt()" value="#D8ECF8" placeholder="#D8ECF8"></div>
+          <div class="docroi-field"><label for="docroiEmail">Email RGPD</label><input id="docroiEmail" type="email" oninput="docroiBuildPrompt()" placeholder="contacto@empresa.com"></div>
+          <div class="docroi-field docroi-full"><label for="docroiContacto">Datos de contacto</label><textarea id="docroiContacto" oninput="docroiBuildPrompt()" placeholder="Teléfono, email, dirección, persona de contacto..."></textarea></div>
+          <div class="docroi-field docroi-full"><label for="docroiLogo">URL del logo, si no vas a adjuntarlo</label><input id="docroiLogo" type="url" oninput="docroiBuildPrompt()" placeholder="https://.../logo.png"></div>
+          <div class="docroi-field docroi-full"><label for="docroiMaps">URL Google Maps</label><input id="docroiMaps" type="url" oninput="docroiBuildPrompt()" placeholder="https://maps.google.com/..."></div>
+          <div class="docroi-field docroi-full"><label for="docroiBuyer">Buyer persona / resumen orientativo</label><textarea id="docroiBuyer" style="min-height:190px" oninput="docroiBuildPrompt()" placeholder="Si no vas a adjuntar la ficha, pega aquí el buyer persona completo. Si sí vas a adjuntarla, escribe una nota breve, por ejemplo: Analiza la ficha buyer persona adjunta de la píldora 2 y úsala como fuente principal."></textarea></div>
         </div>
         <div style="margin-top:18px"><button type="button" class="docroi-btn docroi-btn-blue" onclick="docroiBuildPrompt()">Generar prompt personalizado</button></div>
       </div>
     </div>
 
     <div class="docroi-prompt-frame">
-      <div class="docroi-prompt-top"><strong>prompt listo para usar</strong><span>sin depender de documentos externos</span></div>
+      <div class="docroi-prompt-top"><strong>prompt listo para usar</strong><span>adaptado a tus opciones</span></div>
       <textarea id="docroiPromptArea" class="docroi-prompt-box" spellcheck="false"></textarea>
       <div class="docroi-actions">
         <button type="button" class="docroi-btn docroi-btn-blue" onclick="docroiBuildAndCopyPrompt()">Generar y copiar</button>
@@ -136,35 +144,43 @@ var docroiBasePrompt = `Actúa como diseñador web senior, desarrollador front-e
 Objetivo: crear una landing page sencilla, profesional y didáctica a partir de una ficha de buyer persona generada con Doc ROI.
 
 REGLA OBLIGATORIA
-La página no debe ser genérica. Debe nacer del buyer persona escrito en este prompt. Si no hay texto de buyer persona, no crees la web y responde:
-“Para crear una página web orientada correctamente al buyer persona necesito que pegues el contenido de la ficha de buyer persona generada con Doc ROI. Puedes crearla aquí: https://buyer-persona-three.vercel.app/”
+La página no debe ser genérica. Debe nacer del buyer persona. El buyer persona puede estar escrito en este prompt o estar en una ficha adjunta, según se indique en el apartado FUENTES DE INFORMACIÓN. Si no encuentras buyer persona ni en el prompt ni en los adjuntos indicados, no crees la web y responde:
+“Para crear una página web orientada correctamente al buyer persona necesito que pegues el contenido de la ficha o adjuntes la ficha de buyer persona generada con Doc ROI. Puedes crearla aquí: https://buyer-persona-three.vercel.app/”
+
+FUENTES DE INFORMACIÓN
+Buyer persona: [MODO BUYER]
+Logo: [MODO LOGO]
 
 DATOS DEL PROYECTO
 Nombre: [NOMBRE]
 Color principal: [COLOR PRINCIPAL]
 Color secundario: [COLOR SECUNDARIO]
-URL del logo: [LOGO]
+Logo / URL del logo: [LOGO]
 Datos de contacto: [DATOS DE CONTACTO]
 Email RGPD: [EMAIL RGPD]
 Google Maps: [URL GOOGLE MAPS]
-Buyer persona / ficha Doc ROI:
+Buyer persona / ficha Doc ROI / resumen orientativo:
 [BUYER PERSONA]
 
 INSTRUCCIONES
 1. Analiza el buyer persona: perfil, contexto, objetivos, pains, gains, mapa de empatía, objeciones, motivaciones, keywords, canales y contenidos recomendados.
-2. Crea una landing page completa orientada a ese perfil.
-3. No inventes datos importantes. Si falta algo, usa [PENDIENTE].
-4. Entrega una vista previa si la plataforma lo permite.
-5. Después entrega el código completo en un único archivo index.html.
+2. Si se indica que hay ficha buyer persona adjunta, usa esa ficha como fuente principal y usa el texto pegado como apoyo.
+3. Si se indica que el buyer persona está escrito en el prompt, usa el texto pegado como fuente principal.
+4. Si se indica que hay logo adjunto, utiliza el archivo de logo adjunto como referencia visual.
+5. Si no hay logo adjunto pero hay URL de logo, usa esa URL en la página.
+6. Crea una landing page completa orientada a ese perfil.
+7. No inventes datos importantes. Si falta algo, usa [PENDIENTE].
+8. Entrega una vista previa si la plataforma lo permite.
+9. Después entrega el código completo en un único archivo index.html.
 
 ESTRUCTURA DE LA WEB
-1. Cabecera con logo si hay URL disponible, nombre, menú hamburguesa y anclas internas.
+1. Cabecera con logo si hay adjunto o URL disponible, nombre, menú hamburguesa y anclas internas.
 2. Bloque hero con propuesta de valor y formulario.
 3. Formulario con nombre, email, teléfono, empresa, cargo, interés, mensaje, checkbox RGPD obligatorio y mensaje de confirmación.
 4. Bloque de soluciones para el buyer persona, con 3 a 6 tarjetas conectadas a pains, necesidades, objeciones y beneficios.
 5. Bloque blog con 3 a 6 contenidos pensados para atraer, educar y activar al buyer persona.
 6. Claim final de contacto con botón que vuelve al formulario.
-7. Footer con logo si hay URL disponible, contacto, email, teléfono, ubicación, mapa o botón a Google Maps y enlaces internos.
+7. Footer con logo si hay adjunto o URL disponible, contacto, email, teléfono, ubicación, mapa o botón a Google Maps y enlaces internos.
 
 REQUISITOS TÉCNICOS
 Usa solo HTML5, CSS3 y JavaScript vanilla.
@@ -185,26 +201,33 @@ Después muestra la vista previa si es posible.
 Después entrega el código completo index.html.
 Termina indicando qué puede modificar el alumno: colores, logo, textos, soluciones, blog, contacto y mapa.`;
 function docroiValue(id,fallback){var el=document.getElementById(id);var value=el?String(el.value||'').trim():'';return value||fallback;}
+function docroiChecked(id){var el=document.getElementById(id);return !!(el&&el.checked);}
 function docroiSetStatus(message){var status=document.getElementById('docroiPromptStatus');if(status)status.textContent=message;}
 function docroiBuildPrompt(){
+  var adjuntaBuyer=docroiChecked('docroiAdjuntaBuyer');
+  var adjuntaLogo=docroiChecked('docroiAdjuntaLogo');
+  var modoBuyer=adjuntaBuyer?'El usuario adjuntará al chat la ficha buyer persona generada en la píldora 2. Analiza ese documento adjunto como fuente principal. Si además hay texto pegado abajo, úsalo como resumen orientativo o apoyo.':'El usuario no adjuntará ficha. Usa como fuente principal el buyer persona escrito en este prompt.';
+  var modoLogo=adjuntaLogo?'El usuario adjuntará al chat el archivo de logo. Usa ese archivo como referencia visual e incorpóralo en la propuesta cuando la plataforma lo permita.':'El usuario no adjuntará logo. Usa la URL del logo si está disponible; si no hay URL, marca [PENDIENTE].';
   var data={
+    '[MODO BUYER]':modoBuyer,
+    '[MODO LOGO]':modoLogo,
     '[NOMBRE]':docroiValue('docroiNombre','[NOMBRE]'),
     '[COLOR PRINCIPAL]':docroiValue('docroiColorPrincipal','[COLOR PRINCIPAL]'),
     '[COLOR SECUNDARIO]':docroiValue('docroiColorSecundario','[COLOR SECUNDARIO]'),
     '[DATOS DE CONTACTO]':docroiValue('docroiContacto','[DATOS DE CONTACTO]'),
     '[EMAIL RGPD]':docroiValue('docroiEmail','[EMAIL RGPD]'),
     '[URL GOOGLE MAPS]':docroiValue('docroiMaps','[URL GOOGLE MAPS]'),
-    '[LOGO]':docroiValue('docroiLogo','[URL DEL LOGO]'),
-    '[BUYER PERSONA]':docroiValue('docroiBuyer','[BUYER PERSONA]')
+    '[LOGO]':adjuntaLogo?'Logo adjunto por el usuario en el chat. '+docroiValue('docroiLogo','Sin URL adicional.') : docroiValue('docroiLogo','[URL DEL LOGO]'),
+    '[BUYER PERSONA]':adjuntaBuyer?'Ficha buyer persona adjunta por el usuario en el chat. Nota/resumen escrito por el usuario: '+docroiValue('docroiBuyer','[SIN RESUMEN PEGADO]') : docroiValue('docroiBuyer','[BUYER PERSONA]')
   };
   var prompt=docroiBasePrompt;
   Object.keys(data).forEach(function(key){prompt=prompt.split(key).join(data[key]);});
-  prompt='IMPORTANTE PARA ESTA EJECUCIÓN:\nTrabaja únicamente con la información escrita en este prompt. No solicites documentos externos. Si falta algún dato, marca [PENDIENTE] y continúa con una solución funcional.\n\n'+prompt;
+  prompt='IMPORTANTE PARA ESTA EJECUCIÓN:\nRespeta las fuentes indicadas. Si el usuario ha marcado que adjuntará buyer persona o logo, espera esos adjuntos en el chat y úsalos. Si no están marcados, trabaja con el texto y las URLs escritos en el prompt. Si falta algún dato, marca [PENDIENTE] y continúa con una solución funcional.\n\n'+prompt;
   var area=document.getElementById('docroiPromptArea');if(area)area.value=prompt;
-  docroiSetStatus('Prompt personalizado generado. Puedes copiarlo o descargarlo.');
+  docroiSetStatus('Prompt personalizado generado según tus opciones. Puedes copiarlo o descargarlo.');
   return prompt;
 }
-function docroiCopyPrompt(){var area=document.getElementById('docroiPromptArea');if(!area)return;var text=area.value||docroiBuildPrompt();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){docroiSetStatus('Prompt copiado. Ya puedes pegarlo en ChatGPT o Gemini.');}).catch(function(){area.focus();area.select();docroiSetStatus('No se pudo copiar automáticamente. El prompt está seleccionado: pulsa Ctrl+C o Cmd+C.');});}else{area.focus();area.select();docroiSetStatus('Prompt seleccionado. Pulsa Ctrl+C o Cmd+C.');}}
+function docroiCopyPrompt(){var area=document.getElementById('docroiPromptArea');if(!area)return;var text=area.value||docroiBuildPrompt();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){docroiSetStatus('Prompt copiado. Pégalo en ChatGPT o Gemini junto con los adjuntos marcados, si corresponde.');}).catch(function(){area.focus();area.select();docroiSetStatus('No se pudo copiar automáticamente. El prompt está seleccionado: pulsa Ctrl+C o Cmd+C.');});}else{area.focus();area.select();docroiSetStatus('Prompt seleccionado. Pulsa Ctrl+C o Cmd+C.');}}
 function docroiBuildAndCopyPrompt(){docroiBuildPrompt();docroiCopyPrompt();}
 function docroiDownloadPrompt(){var area=document.getElementById('docroiPromptArea');if(!area)return;if(!area.value)docroiBuildPrompt();var blob=new Blob([area.value],{type:'text/plain;charset=utf-8'});var url=URL.createObjectURL(blob);var a=document.createElement('a');a.href=url;a.download='connection_03_prompt_personalizado_activo_digital.txt';document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(url);docroiSetStatus('Prompt .txt generado para descarga.');}
 docroiBuildPrompt();
