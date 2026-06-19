@@ -24,15 +24,22 @@
 .docroi-btn-dark{background:#0B0F19;color:#fff!important;border:1px solid rgba(11,15,25,.88)!important}
 .docroi-btn-blue{background:#003B5C;color:#fff!important;border:1px solid rgba(0,59,92,.88)!important}
 .docroi-btn-white{background:#fff;color:#0B0F19!important;border:1px solid #E5E7EB!important}
-.docroi-builder{display:grid;grid-template-columns:1fr;gap:16px}
+.docroi-form-shell{display:grid;gap:18px;background:#FBFDFF;border:1px solid #E2E8F0;border-radius:22px;padding:18px;box-shadow:inset 0 1px 0 rgba(255,255,255,.9)}
+.docroi-group{display:grid;gap:14px;padding:18px;background:#fff;border:1px solid #E5E7EB;border-radius:18px}
+.docroi-group-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;border-bottom:1px solid #EEF2F7;padding-bottom:12px}
+.docroi-group-title{display:block;margin:0;color:#0B0F19;font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.04em}
+.docroi-group-help{margin:4px 0 0;color:#64748B;font-size:13px;line-height:1.5;font-weight:600}
 .docroi-row{display:grid;grid-template-columns:1fr;gap:14px;align-items:start}
 .docroi-field label{display:block;font-size:12px;font-weight:900;margin-bottom:7px;color:#0B0F19}
-.docroi-field input,.docroi-field textarea{width:100%;border:1px solid #CBD5E1;background:#fff;border-radius:14px;padding:13px 14px;font-size:14px;line-height:1.45;color:#111827;outline:none;font-family:Inter,Helvetica,Arial,sans-serif!important}
-.docroi-field textarea{min-height:112px;resize:vertical}
-.docroi-field input:focus,.docroi-field textarea:focus{border-color:#003B5C;box-shadow:0 0 0 3px rgba(0,59,92,.12)}
-.docroi-option{display:flex;gap:12px;align-items:flex-start;background:#F8FAFC;border:1px solid #E5E7EB;border-radius:18px;padding:14px 16px;color:#0B0F19;font-size:14px;line-height:1.45;font-weight:900;width:100%}
-.docroi-option input{width:18px;height:18px;margin:2px 0 0;accent-color:#003B5C;flex:0 0 auto}
-.docroi-option span{display:block;color:#5B6472;font-weight:600;font-size:13px;margin-top:3px;max-width:760px}
+.docroi-field input,.docroi-field textarea{width:100%;border:1px solid #C9D5E4;background:#fff;border-radius:14px;padding:14px 16px;font-size:15px;line-height:1.45;color:#111827;outline:none;font-family:Inter,Helvetica,Arial,sans-serif!important;box-shadow:0 1px 0 rgba(15,23,42,.03)}
+.docroi-field input{min-height:54px}
+.docroi-field textarea{min-height:160px;resize:vertical}
+.docroi-field input::placeholder,.docroi-field textarea::placeholder{color:#7B8494}
+.docroi-field input:focus,.docroi-field textarea:focus{border-color:#003B5C;box-shadow:0 0 0 4px rgba(0,59,92,.12)}
+.docroi-option{display:flex;gap:14px;align-items:flex-start;background:#F1F7FB;border:1px solid #D8ECF8;border-radius:18px;padding:16px 18px;color:#0B0F19;font-size:15px;line-height:1.45;font-weight:900;width:100%;cursor:pointer;transition:.18s}
+.docroi-option:hover{border-color:#9DCAE3;background:#EAF6FB}
+.docroi-option input{width:20px;height:20px;margin:1px 0 0;accent-color:#003B5C;flex:0 0 auto}
+.docroi-option span{display:block;color:#4B5870;font-weight:650;font-size:13px;margin-top:4px;max-width:780px}
 .docroi-prompt-frame{background:#0B0F19;border-radius:28px;padding:14px;border:1px solid rgba(11,15,25,.88);box-shadow:0 22px 58px rgba(11,15,25,.18)}
 .docroi-prompt-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#fff;padding:8px 10px 18px}
 .docroi-prompt-top strong{color:#fff!important;font-size:14px;text-transform:uppercase;letter-spacing:.06em}
@@ -40,9 +47,9 @@
 .docroi-prompt-box{width:100%;min-height:500px;resize:vertical;border:1px solid #CBD5E1;border-radius:20px;padding:20px;font-family:Consolas,Monaco,'Courier New',monospace!important;font-size:13px;line-height:1.55;color:#111827;background:#FBFDFF}
 .docroi-actions{display:grid;grid-template-columns:1fr;gap:12px;margin-top:18px}
 .docroi-status{margin-top:12px;min-height:24px;font-size:14px;line-height:1.5;font-weight:900;color:#D8ECF8}
-.docroi-note{background:#EAF6FB;border:1px solid #D8ECF8;border-radius:20px;padding:18px;color:#003B5C;font-weight:800;line-height:1.65;margin-top:18px}
-@media(min-width:769px){.docroi-section{padding:76px 24px}.docroi-grid{grid-template-columns:1fr 1fr}.docroi-row{grid-template-columns:1fr 1fr}.docroi-row-logo{grid-template-columns:1fr 1.8fr}.docroi-row-contact{grid-template-columns:1fr}.docroi-row-last{grid-template-columns:1fr .7fr}.docroi-actions{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:560px){.docroi-logo-frame img{height:54px}.docroi-card{padding:22px}.docroi-prompt-box{min-height:420px;font-size:12px;padding:16px}.docroi-option{padding:13px}}
+.docroi-note{background:#EAF6FB;border:1px solid #D8ECF8;border-radius:18px;padding:16px 18px;color:#003B5C;font-weight:800;line-height:1.65;margin-top:18px}
+@media(min-width:769px){.docroi-section{padding:76px 24px}.docroi-grid{grid-template-columns:1fr 1fr}.docroi-row{grid-template-columns:1fr 1fr}.docroi-row-logo{grid-template-columns:.95fr 1.35fr}.docroi-row-contact{grid-template-columns:1fr}.docroi-row-last{grid-template-columns:1fr .72fr}.docroi-actions{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){.docroi-logo-frame img{height:54px}.docroi-card{padding:20px}.docroi-form-shell{padding:12px;border-radius:18px}.docroi-group{padding:14px}.docroi-group-head{display:block}.docroi-prompt-box{min-height:420px;font-size:12px;padding:16px}.docroi-option{padding:14px}.docroi-field input,.docroi-field textarea{font-size:14px}}
 </style>
 
 <div class="docroi-c03">
@@ -92,8 +99,9 @@
       <h2>Personaliza la píldora antes de copiar</h2>
       <p class="docroi-muted">Primero define identidad y adjuntos, después buyer persona, y al final contacto. Si no marcas una casilla, el prompt usará lo escrito en los campos.</p>
       <div class="docroi-note">Puedes crear o recuperar la ficha de buyer persona aquí: <a href="https://buyer-persona-three.vercel.app/" target="_blank" rel="noopener noreferrer" style="color:#003B5C;font-weight:900">buyer-persona-three.vercel.app</a></div>
-      <div class="docroi-card" style="margin-top:18px">
-        <div class="docroi-builder">
+      <div class="docroi-form-shell" style="margin-top:18px">
+        <div class="docroi-group">
+          <div class="docroi-group-head"><div><strong class="docroi-group-title">1. Identidad visual</strong><p class="docroi-group-help">Define marca, logo y colores base para que el activo tenga coherencia visual.</p></div></div>
           <div class="docroi-row docroi-row-logo">
             <div class="docroi-field"><label for="docroiNombre">Nombre de empresa / producto / servicio</label><input id="docroiNombre" type="text" oninput="docroiBuildPrompt()" placeholder="Ej.: Academia Nova, Clínica X, Servicio Y"></div>
             <div class="docroi-field"><label for="docroiLogo">URL del logo, si no vas a adjuntarlo</label><input id="docroiLogo" type="url" oninput="docroiBuildPrompt()" placeholder="https://.../logo.png"></div>
@@ -103,10 +111,16 @@
             <div class="docroi-field"><label for="docroiColorPrincipal">Color principal</label><input id="docroiColorPrincipal" type="text" oninput="docroiBuildPrompt()" value="#003B5C" placeholder="#003B5C"></div>
             <div class="docroi-field"><label for="docroiColorSecundario">Color secundario</label><input id="docroiColorSecundario" type="text" oninput="docroiBuildPrompt()" value="#D8ECF8" placeholder="#D8ECF8"></div>
           </div>
+        </div>
+        <div class="docroi-group">
+          <div class="docroi-group-head"><div><strong class="docroi-group-title">2. Buyer persona</strong><p class="docroi-group-help">Esta es la fuente estratégica: cuanto mejor esté descrito el perfil, mejor será la landing.</p></div></div>
           <div class="docroi-row docroi-row-contact">
-            <div class="docroi-field"><label for="docroiBuyer">Buyer persona / resumen orientativo</label><textarea id="docroiBuyer" style="min-height:190px" oninput="docroiBuildPrompt()" placeholder="Si no vas a adjuntar la ficha, pega aquí el buyer persona completo. Si vas a adjuntarla, escribe una nota breve, por ejemplo: Analiza la ficha buyer persona adjunta de la píldora 2 y úsala como fuente principal."></textarea></div>
+            <div class="docroi-field"><label for="docroiBuyer">Buyer persona / resumen orientativo</label><textarea id="docroiBuyer" oninput="docroiBuildPrompt()" placeholder="Si no vas a adjuntar la ficha, pega aquí el buyer persona completo. Si vas a adjuntarla, escribe una nota breve, por ejemplo: Analiza la ficha buyer persona adjunta de la píldora 2 y úsala como fuente principal."></textarea></div>
           </div>
           <label class="docroi-option"><input id="docroiAdjuntaBuyer" type="checkbox" onchange="docroiBuildPrompt()"><div>Adjuntaré la ficha buyer persona de la píldora 2<span>El prompt pedirá a la IA que analice el documento adjunto. Puedes añadir un resumen breve para orientar.</span></div></label>
+        </div>
+        <div class="docroi-group">
+          <div class="docroi-group-head"><div><strong class="docroi-group-title">3. Contacto y cumplimiento</strong><p class="docroi-group-help">Estos datos completan el formulario, el footer y los enlaces útiles de la landing.</p></div></div>
           <div class="docroi-row docroi-row-contact">
             <div class="docroi-field"><label for="docroiContacto">Datos de contacto</label><textarea id="docroiContacto" oninput="docroiBuildPrompt()" placeholder="Teléfono, email, dirección, persona de contacto..."></textarea></div>
           </div>
@@ -115,7 +129,7 @@
             <div class="docroi-field"><label for="docroiEmail">Email RGPD</label><input id="docroiEmail" type="email" oninput="docroiBuildPrompt()" placeholder="contacto@empresa.com"></div>
           </div>
         </div>
-        <div style="margin-top:18px"><button type="button" class="docroi-btn docroi-btn-blue" onclick="docroiBuildPrompt()">Generar prompt personalizado</button></div>
+        <button type="button" class="docroi-btn docroi-btn-blue" onclick="docroiBuildPrompt()">Generar prompt personalizado</button>
       </div>
     </div>
 
