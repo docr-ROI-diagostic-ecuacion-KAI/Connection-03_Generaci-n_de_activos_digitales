@@ -7,6 +7,20 @@ Este repositorio contiene la píldora Doc ROI para la Connection 03: **Generaci�
 - `index.html`: página de entrada para desplegar correctamente en Vercel.
 - `connection_03_activos_digitales_pildora_wordpress.txt`: bloque HTML listo para pegar en WordPress como bloque HTML personalizado.
 
+## Flujo funcional
+
+La práctica no depende de subir documentos. El alumno pega la información en los campos de la página:
+
+- datos del proyecto
+- colores
+- contacto
+- email RGPD
+- URL del logo, si existe
+- URL de Google Maps, si existe
+- contenido del buyer persona
+
+La página genera un prompt completo para crear una landing page en HTML, CSS y JavaScript.
+
 ## Uso en Vercel
 
 1. Importar este repositorio en Vercel.
@@ -22,5 +36,3 @@ Vercel servirá `index.html` como página principal.
 2. Copiar todo el contenido.
 3. Pegar en WordPress dentro de un bloque HTML personalizado.
 4. Publicar o actualizar la página.
-
-Incluye el constructor de prompt personalizado para que el alumno complete datos de marca, contacto, buyer persona, logo y mapa antes de copiar o descargar el prompt final.
