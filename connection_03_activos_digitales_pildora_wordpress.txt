@@ -48,7 +48,7 @@
 .docroi-actions{display:grid;grid-template-columns:1fr;gap:12px;margin-top:18px}
 .docroi-status{margin-top:12px;min-height:24px;font-size:14px;line-height:1.5;font-weight:900;color:#D8ECF8}
 .docroi-note{background:#EAF6FB;border:1px solid #D8ECF8;border-radius:18px;padding:16px 18px;color:#003B5C;font-weight:800;line-height:1.65;margin-top:18px}
-@media(min-width:769px){.docroi-section{padding:76px 24px}.docroi-grid{grid-template-columns:1fr 1fr}.docroi-row{grid-template-columns:1fr 1fr}.docroi-row-logo{grid-template-columns:1fr}.docroi-row-contact{grid-template-columns:1fr}.docroi-row-last{grid-template-columns:1fr .72fr}.docroi-actions{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:769px){.docroi-section{padding:76px 24px}.docroi-grid{grid-template-columns:1fr 1fr}.docroi-row{grid-template-columns:1fr 1fr}.docroi-row-logo{grid-template-columns:.95fr 1.35fr}.docroi-row-contact{grid-template-columns:1fr}.docroi-row-last{grid-template-columns:1fr .72fr}.docroi-row:not(.docroi-row-contact) .docroi-field{display:flex;flex-direction:column}.docroi-row:not(.docroi-row-contact) .docroi-field label{min-height:34px;display:flex;align-items:flex-end}.docroi-actions{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:560px){.docroi-logo-frame img{height:54px}.docroi-card{padding:20px}.docroi-form-shell{padding:12px;border-radius:18px}.docroi-group{padding:14px}.docroi-group-head{display:block}.docroi-prompt-box{min-height:420px;font-size:12px;padding:16px}.docroi-option{padding:14px}.docroi-field input,.docroi-field textarea{font-size:14px}}
 </style>
 
@@ -108,8 +108,8 @@
           </div>
           <label class="docroi-option"><input id="docroiAdjuntaLogo" type="checkbox" onchange="docroiBuildPrompt()"><div>Adjuntaré el logo en el chat de IA<span>El prompt pedirá a la IA que use el archivo de logo adjunto. Si no marcas esto, utilizará la URL del logo.</span></div></label>
           <div class="docroi-row">
-            <div class="docroi-field"><label for="docroiColorPrincipal">Color principal</label><input id="docroiColorPrincipal" type="text" oninput="docroiBuildPrompt()" value="#003B5C" placeholder="#003B5C"></div>
-            <div class="docroi-field"><label for="docroiColorSecundario">Color secundario</label><input id="docroiColorSecundario" type="text" oninput="docroiBuildPrompt()" value="#D8ECF8" placeholder="#D8ECF8"></div>
+            <div class="docroi-field"><label for="docroiColorPrincipal">Color principal (nombre, RGB o HEX)</label><input id="docroiColorPrincipal" type="text" oninput="docroiBuildPrompt()" placeholder="Ej.: marrón, rgb(91,63,43), #5B3F2B"></div>
+            <div class="docroi-field"><label for="docroiColorSecundario">Color secundario (nombre, RGB o HEX)</label><input id="docroiColorSecundario" type="text" oninput="docroiBuildPrompt()" placeholder="Ej.: azul claro, rgb(216,236,248), #D8ECF8"></div>
           </div>
         </div>
         <div class="docroi-group">
@@ -234,8 +234,8 @@ function docroiBuildPrompt(){
     '[MODO BUYER]':modoBuyer,
     '[MODO LOGO]':modoLogo,
     '[NOMBRE]':docroiValue('docroiNombre','[NOMBRE]'),
-    '[COLOR PRINCIPAL]':docroiValue('docroiColorPrincipal','[COLOR PRINCIPAL]'),
-    '[COLOR SECUNDARIO]':docroiValue('docroiColorSecundario','[COLOR SECUNDARIO]'),
+    '[COLOR PRINCIPAL]':docroiValue('docroiColorPrincipal','#003B5C'),
+    '[COLOR SECUNDARIO]':docroiValue('docroiColorSecundario','#D8ECF8'),
     '[DATOS DE CONTACTO]':docroiValue('docroiContacto','[DATOS DE CONTACTO]'),
     '[EMAIL RGPD]':docroiValue('docroiEmail','[EMAIL RGPD]'),
     '[URL GOOGLE MAPS]':docroiValue('docroiMaps','[URL GOOGLE MAPS]'),
