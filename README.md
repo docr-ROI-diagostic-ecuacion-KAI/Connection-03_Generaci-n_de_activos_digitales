@@ -9,17 +9,14 @@ Este repositorio contiene la píldora Doc ROI para la Connection 03: **Generaci�
 
 ## Flujo funcional
 
-La práctica no depende de subir documentos. El alumno pega la información en los campos de la página:
+La página genera un prompt completo para crear una landing page en HTML, CSS y JavaScript. El alumno puede trabajar de dos formas:
 
-- datos del proyecto
-- colores
-- contacto
-- email RGPD
-- URL del logo, si existe
-- URL de Google Maps, si existe
-- contenido del buyer persona
+- pegar el buyer persona en el campo correspondiente
+- marcar que adjuntará la ficha buyer persona de la píldora 2 al chat de IA
+- pegar la URL del logo
+- marcar que adjuntará el logo al chat de IA
 
-La página genera un prompt completo para crear una landing page en HTML, CSS y JavaScript.
+El prompt cambia automáticamente según las casillas seleccionadas y explica a ChatGPT o Gemini qué fuentes debe usar.
 
 ## Uso en Vercel
 
