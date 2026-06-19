@@ -22,6 +22,11 @@
         html = html
           .replace('<!-- wp:html -->','')
           .replace('<!-- /wp:html -->','');
+        html = html
+          .replace('Adjuntaré el logo en el chat de IA<span>El prompt pedirá a la IA que use el archivo de logo adjunto. Si no marcas esto, utilizará la URL del logo.</span>', 'Subiré el logo después a ChatGPT/Gemini junto con este prompt<span>Marca esta opción solo si, después de copiar el prompt, también vas a subir el archivo del logo en el chat. Si no, deja la casilla vacía y usa una URL del logo.</span>')
+          .replace('Adjuntaré la ficha buyer persona de la píldora 2<span>El prompt pedirá a la IA que analice el documento adjunto. Puedes añadir un resumen breve para orientar.</span>', 'Subiré la ficha buyer persona después junto con este prompt<span>Marca esta opción solo si, después de copiar el prompt, también vas a subir la ficha de la píldora 2 en ChatGPT/Gemini. Si no, pega el buyer persona en el campo de arriba.</span>')
+          .replace('marca si vas a adjuntar buyer persona o logo', 'marca si después vas a subir buyer persona o logo al chat de IA')
+          .replace('junto con esos archivos si has elegido esa opción', 'y después sube esos archivos en el chat si has marcado esa opción');
         html += '<style>.docroi-hero .docroi-card p,.docroi-hero .docroi-card .docroi-muted{color:#4B5870!important}.docroi-hero .docroi-card h2{color:#0B0F19!important}</style>';
         document.open();
         document.write('<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Connection 03 · Generación de activos digitales</title></head><body style="margin:0">' + html + '</body></html>');
