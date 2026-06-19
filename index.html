@@ -22,6 +22,7 @@
         html = html
           .replace('<!-- wp:html -->','')
           .replace('<!-- /wp:html -->','');
+        html += '<style>.docroi-hero .docroi-card p,.docroi-hero .docroi-card .docroi-muted{color:#4B5870!important}.docroi-hero .docroi-card h2{color:#0B0F19!important}</style>';
         document.open();
         document.write('<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Connection 03 · Generación de activos digitales</title></head><body style="margin:0">' + html + '</body></html>');
         document.close();
