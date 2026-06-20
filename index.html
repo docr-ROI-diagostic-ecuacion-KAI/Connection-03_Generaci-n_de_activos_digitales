@@ -15,15 +15,17 @@
   <script>
     var DOCROI_LOGO = 'https://docroi.marketing/wp-content/uploads/2024/12/Logo_Doctor_ROI.jpg';
     var DOCROI_BOTIQUIN = 'https://el-botiquin-del-doc-roi.vercel.app/';
+    var PRODUCT_URL = 'https://connection-04-ficha-de-producto.vercel.app/';
+    var BUYER_URL = 'https://buyer-persona-three.vercel.app/';
 
     function addGlobalHeader(){
       if(document.querySelector('.docroi-global-header')) return;
       var css = document.createElement('style');
-      css.textContent = 'html{scroll-behavior:smooth}.docroi-global-header{position:sticky;top:0;z-index:999;background:#03060C;border-bottom:1px solid rgba(255,255,255,.12)}.docroi-global-header .docroi-wrap{max-width:1120px;margin:0 auto;width:calc(100% - 40px);display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 0}.docroi-global-brand{display:inline-flex;align-items:center;text-decoration:none}.docroi-global-brand img{width:188px;height:54px;object-fit:contain;display:block}.docroi-header-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap}.docroi-header-actions a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0 14px;border:1px solid rgba(255,255,255,.18);border-radius:8px;color:#F3F4F6!important;text-decoration:none!important;font-size:14px;font-weight:900;line-height:1;white-space:nowrap}.docroi-header-actions .docroi-header-cta{background:#fff!important;color:#0B0F19!important;border-color:#fff!important;padding:0 18px}.docroi-section,.docroi-hero,#constructor-prompt{scroll-margin-top:96px}.docroi-product-alert{background:#0B0F19;color:#fff;border-radius:18px;padding:18px;margin-top:18px}.docroi-product-alert strong{color:#fff!important}.docroi-product-alert p{color:#D8ECF8!important;margin:6px 0 0;font-size:14px;line-height:1.55}.docroi-product-alert a{color:#D8ECF8!important;font-weight:900}.docroi-product-priority{border:2px solid #003B5C!important;box-shadow:0 18px 42px rgba(0,59,92,.14)!important}@media(max-width:720px){.docroi-global-header .docroi-wrap{align-items:flex-start;flex-direction:column}.docroi-header-actions{width:100%;justify-content:flex-start}.docroi-header-actions a{flex:1 1 auto}.docroi-header-actions .docroi-header-cta{flex-basis:100%}.docroi-global-brand img{width:160px;height:46px}}';
+      css.textContent = 'html{scroll-behavior:smooth}.docroi-global-header{position:sticky;top:0;z-index:999;background:#03060C;border-bottom:1px solid rgba(255,255,255,.12)}.docroi-global-header .docroi-wrap{max-width:1120px;margin:0 auto;width:calc(100% - 40px);display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 0}.docroi-global-brand{display:inline-flex;align-items:center;text-decoration:none}.docroi-global-brand img{width:188px;height:54px;object-fit:contain;display:block}.docroi-header-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap}.docroi-header-actions a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0 14px;border:1px solid rgba(255,255,255,.18);border-radius:8px;color:#F3F4F6!important;text-decoration:none!important;font-size:14px;font-weight:900;line-height:1;white-space:nowrap}.docroi-header-actions .docroi-header-cta{background:#fff!important;color:#0B0F19!important;border-color:#fff!important;padding:0 18px}.docroi-section,.docroi-hero,#constructor-prompt{scroll-margin-top:96px}.docroi-c03 .docroi-grid{align-items:start}.docroi-resource-link{display:inline-flex;margin-top:8px;color:#003B5C!important;font-size:12px;font-weight:900;text-decoration:underline;text-underline-offset:3px}.docroi-result-objective{background:#0B0F19;color:#fff;border:1px solid rgba(255,255,255,.10);border-radius:18px;padding:18px;margin:0 0 14px;box-shadow:0 18px 42px rgba(11,15,25,.16)}.docroi-result-objective strong{display:block;color:#fff!important;font-size:13px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}.docroi-result-objective p{margin:0;color:#D8ECF8!important;font-size:14px;line-height:1.6;font-weight:750}.docroi-product-alert{display:none}.docroi-product-priority{border:1px solid #D8ECF8!important;box-shadow:0 16px 34px rgba(0,59,92,.08)!important}.docroi-commitment{background:#EAF6FB;border:1px solid #D8ECF8;border-radius:18px;padding:16px;margin-top:14px}.docroi-commitment h3{margin:0 0 6px!important;font-size:15px!important;line-height:1.25!important;color:#003B5C!important}.docroi-commitment p{margin:0 0 12px;color:#35506A;font-size:13px;line-height:1.5;font-weight:750}.docroi-commitment-grid{display:grid;gap:10px}.docroi-commitment-item{display:flex!important;align-items:flex-start!important;gap:10px!important;background:#fff!important;border:1px solid #CFE8F7!important;border-radius:12px!important;padding:12px!important;font-size:13px!important;line-height:1.35!important;font-weight:900!important;cursor:pointer!important}.docroi-commitment-item input{width:18px!important;height:18px!important;margin:1px 0 0!important;accent-color:#003B5C!important;flex:0 0 auto!important}.docroi-commitment-item span{display:block!important;margin-top:2px!important;color:#4B5870!important;font-size:12px!important;line-height:1.35!important;font-weight:650!important}.docroi-optional-hint{display:block;margin-top:8px;color:#64748B;font-size:12px;line-height:1.45;font-weight:700}.docroi-compact-note{background:#EAF6FB;border:1px solid #D8ECF8;border-radius:14px;padding:13px 14px;color:#003B5C;font-size:13px;line-height:1.55;font-weight:800;margin:0 0 14px}.docroi-compact-note a{color:#003B5C!important;font-weight:900}.docroi-prompt-frame{position:sticky;top:104px}@media(min-width:860px){.docroi-commitment-grid{grid-template-columns:1fr 1fr}}@media(max-width:900px){.docroi-prompt-frame{position:static}.docroi-result-objective{margin-top:18px}}@media(max-width:720px){.docroi-global-header .docroi-wrap{align-items:flex-start;flex-direction:column}.docroi-header-actions{width:100%;justify-content:flex-start}.docroi-header-actions a{flex:1 1 auto}.docroi-header-actions .docroi-header-cta{flex-basis:100%}.docroi-global-brand img{width:160px;height:46px}.docroi-commitment-grid{grid-template-columns:1fr}.docroi-result-objective,.docroi-commitment{border-radius:14px;padding:14px}}';
       document.head.appendChild(css);
       var header = document.createElement('header');
       header.className = 'docroi-global-header';
-      header.innerHTML = '<div class="docroi-wrap"><a class="docroi-global-brand" href="'+DOCROI_BOTIQUIN+'" target="_blank" rel="noopener" aria-label="Ir al Botiquín DOC ROI"><img src="'+DOCROI_LOGO+'" alt="DOC ROI"></a><nav class="docroi-header-actions" aria-label="Navegación principal DOC ROI"><a href="#constructor-prompt">Método</a><a href="https://connection-04-ficha-de-producto.vercel.app/" target="_blank" rel="noopener">Recursos</a><a class="docroi-header-cta" href="#constructor-prompt">Abrir herramienta</a></nav></div>';
+      header.innerHTML = '<div class="docroi-wrap"><a class="docroi-global-brand" href="'+DOCROI_BOTIQUIN+'" target="_blank" rel="noopener" aria-label="Ir al Botiquín DOC ROI"><img src="'+DOCROI_LOGO+'" alt="DOC ROI"></a><nav class="docroi-header-actions" aria-label="Navegación principal DOC ROI"><a href="#constructor-prompt">Método</a><a href="'+PRODUCT_URL+'" target="_blank" rel="noopener">Recursos</a><a class="docroi-header-cta" href="#constructor-prompt">Abrir herramienta</a></nav></div>';
       document.body.insertAdjacentElement('afterbegin', header);
       document.querySelectorAll('img[src*="Logo"],img[alt*="Doc ROI"],img[alt*="DOC ROI"]').forEach(function(img){
         img.alt = 'DOC ROI';
@@ -41,6 +43,62 @@
       });
     }
 
+    function setOptionLabel(id, title, help){
+      var input = document.getElementById(id);
+      if(!input) return null;
+      var label = input.closest('label');
+      if(!label) return null;
+      label.classList.add('docroi-commitment-item');
+      var wrapper = label.querySelector('div');
+      if(wrapper){ wrapper.innerHTML = title + '<span>' + help + '</span>'; }
+      return label;
+    }
+
+    function addFieldLinks(){
+      var product = document.getElementById('docroiProducto');
+      if(product){
+        product.placeholder = 'Opcional si vas a subir la ficha. Si no la adjuntas, pega aquí nombre, descripción, atributos, beneficios, precio, objeciones, uso y propuesta de valor.';
+        var pLabel = product.closest('.docroi-field').querySelector('label');
+        if(pLabel && !pLabel.querySelector('a')) pLabel.insertAdjacentHTML('beforeend',' <a class="docroi-resource-link" href="'+PRODUCT_URL+'" target="_blank" rel="noopener">crear ficha</a>');
+      }
+      var buyer = document.getElementById('docroiBuyer');
+      if(buyer){
+        buyer.placeholder = 'Opcional si vas a subir la ficha. Si no la adjuntas, pega aquí el buyer persona completo o un resumen útil para orientar el resultado.';
+        var bLabel = buyer.closest('.docroi-field').querySelector('label');
+        if(bLabel && !bLabel.querySelector('a')) bLabel.insertAdjacentHTML('beforeend',' <a class="docroi-resource-link" href="'+BUYER_URL+'" target="_blank" rel="noopener">crear buyer persona</a>');
+      }
+      var logo = document.getElementById('docroiLogo');
+      if(logo) logo.placeholder = 'URL del logo si no lo adjuntas';
+    }
+
+    function buildAttachmentChecklist(){
+      var promptFrame = document.querySelector('.docroi-prompt-frame');
+      if(!promptFrame || document.querySelector('.docroi-commitment')) return;
+      var commitment = document.createElement('div');
+      commitment.className = 'docroi-commitment';
+      commitment.innerHTML = '<h3>Me comprometo a incluir estos archivos antes de ejecutar</h3><p>Marca solo lo que vas a subir a ChatGPT/Gemini junto con este prompt.</p><div class="docroi-commitment-grid"></div>';
+      promptFrame.insertAdjacentElement('afterend', commitment);
+      var grid = commitment.querySelector('.docroi-commitment-grid');
+      [
+        ['docroiAdjuntaProducto','Ficha de producto','La ficha de la píldora 4 será la fuente principal.'],
+        ['docroiAdjuntaBuyer','Buyer persona','La ficha de la píldora 2 ajustará tono y objeciones.'],
+        ['docroiAdjuntaLogo','Logo de marca','Subiré el archivo de logo al chat.'],
+        ['docroiAdjuntaFotos','Fotos del producto','Subiré imágenes reales para hero y galería.']
+      ].forEach(function(item){
+        var label = setOptionLabel(item[0], item[1], item[2]);
+        if(label) grid.appendChild(label);
+      });
+    }
+
+    function addObjectiveAbovePrompt(){
+      var frame = document.querySelector('.docroi-prompt-frame');
+      if(!frame || document.querySelector('.docroi-result-objective')) return;
+      var objective = document.createElement('div');
+      objective.className = 'docroi-result-objective';
+      objective.innerHTML = '<strong>Objetivo del resultado</strong><p>Crear una ficha de producto web ecommerce, similar en ambición al ejemplo de Juan Valdez, con visor o vista previa en ChatGPT si la plataforma lo permite, y con llamada clara a comprar, reservar o contactar.</p>';
+      frame.insertAdjacentElement('beforebegin', objective);
+    }
+
     function injectProductFichaFlow(){
       addGlobalHeader();
       var buyerCheckbox = document.getElementById('docroiAdjuntaBuyer');
@@ -50,62 +108,65 @@
           var buyerTitle = buyerGroup.querySelector('.docroi-group-title');
           var buyerHelp = buyerGroup.querySelector('.docroi-group-help');
           if(buyerTitle) buyerTitle.textContent = '3. Buyer persona';
-          if(buyerHelp) buyerHelp.textContent = 'Esta fuente orienta tono, objeciones, argumentos y decisión de compra del público objetivo.';
+          if(buyerHelp) buyerHelp.innerHTML = 'Apoyo opcional. Si subes la ficha de la píldora 2, basta con una nota breve. <a class="docroi-resource-link" href="'+BUYER_URL+'" target="_blank" rel="noopener">Abrir píldora buyer persona</a>';
           var productGroup = document.createElement('div');
           productGroup.className = 'docroi-group docroi-product-priority';
-          productGroup.innerHTML = '<div class="docroi-group-head"><div><strong class="docroi-group-title">2. Ficha de producto ecommerce</strong><p class="docroi-group-help">Esta es la pieza nueva y obligatoria. Marca esta opción si subirás la ficha de producto de la píldora 4 al chat junto con el prompt.</p></div></div><div class="docroi-row docroi-row-contact"><div class="docroi-field"><label for="docroiProducto">Ficha de producto / resumen orientativo</label><textarea id="docroiProducto" oninput="docroiBuildPrompt()" placeholder="Si no vas a adjuntar la ficha, pega aquí la ficha completa: nombre, descripción, atributos, beneficios, precio, objeciones, uso, disponibilidad y propuesta de valor."></textarea></div></div><label class="docroi-option"><input id="docroiAdjuntaProducto" type="checkbox" onchange="docroiBuildPrompt()"><div>Subiré la ficha de producto de la píldora 4 junto con este prompt<span>La IA la usará como fuente principal para crear la ficha web ecommerce.</span></div></label><label class="docroi-option"><input id="docroiAdjuntaFotos" type="checkbox" onchange="docroiBuildPrompt()"><div>Subiré fotos reales del producto junto con este prompt<span>La IA usará las imágenes para hero, galería, contexto visual y argumentos de venta.</span></div></label><div class="docroi-product-alert"><strong>Objetivo del resultado</strong><p>Crear una ficha web ecommerce con vista previa o HTML completo, incluyendo comprar ahora, reservar o contactar para cerrar un acuerdo.</p><p><a href="https://connection-04-ficha-de-producto.vercel.app/" target="_blank" rel="noopener">Abrir píldora 4 · ficha de producto</a></p></div>';
+          productGroup.innerHTML = '<div class="docroi-group-head"><div><strong class="docroi-group-title">2. Ficha de producto ecommerce</strong><p class="docroi-group-help">Apoyo opcional. Si subes la ficha de producto de la píldora 4, basta con una nota breve. <a class="docroi-resource-link" href="'+PRODUCT_URL+'" target="_blank" rel="noopener">Abrir píldora ficha de producto</a></p></div></div><div class="docroi-row docroi-row-contact"><div class="docroi-field"><label for="docroiProducto">Ficha de producto / resumen orientativo</label><textarea id="docroiProducto" oninput="docroiBuildPrompt()"></textarea><span class="docroi-optional-hint">Rellena esta caja solo si no vas a adjuntar la ficha completa.</span></div></div><label class="docroi-option"><input id="docroiAdjuntaProducto" type="checkbox" onchange="docroiBuildPrompt()"><div>Ficha de producto<span>Subiré la ficha de producto de la píldora 4.</span></div></label><label class="docroi-option"><input id="docroiAdjuntaFotos" type="checkbox" onchange="docroiBuildPrompt()"><div>Fotos del producto<span>Subiré fotos reales del producto.</span></div></label>';
           buyerGroup.insertAdjacentElement('beforebegin', productGroup);
         }
       }
       var note = document.querySelector('.docroi-note');
-      if(note){ note.innerHTML = 'Crea o recupera la ficha de producto aquí: <a href="https://connection-04-ficha-de-producto.vercel.app/" target="_blank" rel="noopener" style="color:#003B5C;font-weight:900">connection-04-ficha-de-producto.vercel.app</a><br>Crea o recupera la ficha buyer persona aquí: <a href="https://buyer-persona-three.vercel.app/" target="_blank" rel="noopener" style="color:#003B5C;font-weight:900">buyer-persona-three.vercel.app</a>'; }
+      if(note){ note.className = 'docroi-compact-note'; note.innerHTML = 'Recursos: <a href="'+PRODUCT_URL+'" target="_blank" rel="noopener">ficha de producto</a> · <a href="'+BUYER_URL+'" target="_blank" rel="noopener">buyer persona</a>'; }
+      addFieldLinks();
+      addObjectiveAbovePrompt();
+      buildAttachmentChecklist();
       overridePromptBuilder();
     }
 
     function overridePromptBuilder(){
-      window.docroiBasePrompt = 'Actúa como estratega ecommerce, diseñador web senior, copywriter de conversión, desarrollador front-end y profesor de IA aplicada.\n\nOBJETIVO: crear una FICHA DE PRODUCTO WEB ECOMMERCE a partir de los archivos y datos del proyecto. Debe funcionar como una página de producto/landing comercial similar en ambición al ejemplo de Juan Valdez: https://juan-valdez.vercel.app/\n\nANTES DE RESPONDER, revisa los archivos adjuntos de este chat. Deben estar adjuntos si el usuario los ha marcado: logo de marca, ficha buyer persona de la píldora 2, ficha de producto de la píldora 4 y fotos reales del producto.\n\nFUENTES DE INFORMACIÓN\nBuyer persona: [MODO BUYER]\nLogo: [MODO LOGO]\nFicha de producto: [MODO PRODUCTO]\nFotos de producto: [MODO FOTOS]\n\nDATOS DEL PROYECTO\nNombre: [NOMBRE]\nColor principal: [COLOR PRINCIPAL]\nColor secundario: [COLOR SECUNDARIO]\nLogo / URL del logo: [LOGO]\nDatos de contacto, compra, reserva o acuerdo: [DATOS DE CONTACTO]\nEmail RGPD: [EMAIL RGPD]\nGoogle Maps: [URL GOOGLE MAPS]\nBuyer persona / resumen orientativo:\n[BUYER PERSONA]\nFicha de producto / resumen orientativo:\n[PRODUCTO]\n\nREGLA OBLIGATORIA\nNo crees una landing genérica. La página debe nacer de la ficha de producto y del buyer persona. Si falta la ficha de producto y tampoco hay resumen escrito, detente y pide al usuario que adjunte la ficha de producto o que la cree aquí: https://connection-04-ficha-de-producto.vercel.app/\n\nINSTRUCCIONES\nAnaliza ficha de producto, buyer persona, logo y fotos. Crea una ficha web ecommerce completa y responsive con hero, propuesta de valor, beneficios, atributos, galería, objeciones, FAQ y cierre comercial. Incluye SI O SI comprar ahora, reservar o contactar para cerrar un acuerdo. Entrega vista previa/artefacto HTML si la plataforma lo permite; si no, entrega un único index.html completo.';
+      window.docroiBasePrompt = 'Actúa como estratega ecommerce, diseñador web senior, copywriter de conversión, desarrollador front-end y profesor de IA aplicada.\n\nOBJETIVO: crear una FICHA DE PRODUCTO WEB ECOMMERCE a partir de los archivos y datos del proyecto. Debe funcionar como una página de producto/landing comercial similar en ambición y estructura al ejemplo de Juan Valdez: https://juan-valdez.vercel.app/\n\nANTES DE RESPONDER, revisa los archivos adjuntos de este chat. Deben estar adjuntos si el usuario los ha marcado: logo de marca, ficha buyer persona de la píldora 2, ficha de producto de la píldora 4 y fotos reales del producto.\n\nINSTRUCCIÓN PRIORITARIA PARA CHATGPT\nPrimero intenta ejecutar o presentar una vista previa/visor en el propio chat de una ficha de producto web ecommerce. Si la plataforma permite Canvas, artefacto, vista previa HTML o render equivalente, úsalo. Si no puede mostrarse visor, entrega un único archivo index.html completo listo para copiar, guardar y abrir.\n\nFUENTES DE INFORMACIÓN\nBuyer persona: [MODO BUYER]\nLogo: [MODO LOGO]\nFicha de producto: [MODO PRODUCTO]\nFotos de producto: [MODO FOTOS]\n\nDATOS DEL PROYECTO\nNombre: [NOMBRE]\nColor principal: [COLOR PRINCIPAL]\nColor secundario: [COLOR SECUNDARIO]\nLogo / URL del logo: [LOGO]\nDatos de contacto, compra, reserva o acuerdo: [DATOS DE CONTACTO]\nEmail RGPD: [EMAIL RGPD]\nGoogle Maps: [URL GOOGLE MAPS]\nBuyer persona / resumen orientativo:\n[BUYER PERSONA]\nFicha de producto / resumen orientativo:\n[PRODUCTO]\n\nREGLA OBLIGATORIA\nNo crees una landing genérica. La página debe nacer de la ficha de producto y del buyer persona. Si falta la ficha de producto adjunta y tampoco hay resumen escrito, detente y pide al usuario que adjunte la ficha de producto o que la cree aquí: https://connection-04-ficha-de-producto.vercel.app/\n\nINSTRUCCIONES\n1. Analiza la ficha de producto: nombre, descripción, atributos, beneficios, precio, uso, objeciones, disponibilidad, propuesta de valor y elementos diferenciales.\n2. Analiza el buyer persona: pains, gains, objeciones, motivaciones, tono, contexto de compra y palabras clave.\n3. Usa logo y colores para definir identidad visual.\n4. Si hay fotos adjuntas, úsalas para hero, galería, contexto visual y argumentos de venta.\n5. Crea una ficha web ecommerce completa, responsive, clara y profesional.\n6. Incluye SI O SI una zona de conversión con estas opciones cuando tenga sentido: COMPRAR AHORA, RESERVAR o CONTACTAR PARA CERRAR UN ACUERDO.\n7. No inventes datos críticos. Si falta algo secundario, marca [PENDIENTE].\n\nESTRUCTURA OBLIGATORIA\nCabecera, hero de producto, propuesta de valor, beneficios conectados al buyer persona, atributos/ficha técnica, galería, uso o experiencia, objeciones y respuestas, prueba/confianza, FAQ, bloque final de conversión y footer.\n\nREQUISITOS TÉCNICOS\nUsa solo HTML5, CSS3 y JavaScript vanilla. No uses Bootstrap, React, Vue, Tailwind ni librerías externas. CSS dentro de style y JavaScript dentro de script. Debe ser mobile first, responsive, legible y con buen contraste.\n\nSALIDA ESPERADA\nPrimero escribe: He revisado los adjuntos y he creado una ficha web ecommerce orientada al buyer persona y a la ficha de producto. Después muestra el visor/vista previa si es posible. Después entrega el código completo index.html.';
       window.docroiBuildPrompt = function(){
         var adjuntaBuyer = docroiChecked('docroiAdjuntaBuyer');
         var adjuntaLogo = docroiChecked('docroiAdjuntaLogo');
         var adjuntaProducto = docroiChecked('docroiAdjuntaProducto');
         var adjuntaFotos = docroiChecked('docroiAdjuntaFotos');
         var data = {
-          '[MODO BUYER]': adjuntaBuyer ? 'El usuario subirá la ficha buyer persona de la píldora 2.' : 'Usa el buyer persona escrito en este prompt.',
-          '[MODO LOGO]': adjuntaLogo ? 'El usuario subirá el logo al chat.' : 'Usa la URL del logo si está disponible.',
-          '[MODO PRODUCTO]': adjuntaProducto ? 'El usuario subirá la ficha de producto de la píldora 4. Úsala como fuente principal.' : 'Usa el campo de ficha de producto escrito en este prompt.',
-          '[MODO FOTOS]': adjuntaFotos ? 'El usuario subirá fotos reales del producto.' : 'Si no hay fotos, marca [PENDIENTE] o propón indicaciones visuales.',
+          '[MODO BUYER]': adjuntaBuyer ? 'El usuario subirá la ficha buyer persona de la píldora 2. Debes esperar ese adjunto antes de ejecutar.' : 'Usa el buyer persona escrito en este prompt si existe. Si no existe, marca [PENDIENTE] y pide la ficha.',
+          '[MODO LOGO]': adjuntaLogo ? 'El usuario subirá el logo al chat. Debes esperar ese adjunto antes de ejecutar.' : 'Usa la URL del logo si está disponible.',
+          '[MODO PRODUCTO]': adjuntaProducto ? 'El usuario subirá la ficha de producto de la píldora 4. Debes esperar ese adjunto y usarlo como fuente principal.' : 'Usa el campo de ficha de producto escrito en este prompt.',
+          '[MODO FOTOS]': adjuntaFotos ? 'El usuario subirá fotos reales del producto. Debes esperarlas y usarlas para hero y galería.' : 'Si no hay fotos, marca [PENDIENTE] o propón indicaciones visuales.',
           '[NOMBRE]': docroiValue('docroiNombre','[NOMBRE]'),
           '[COLOR PRINCIPAL]': docroiValue('docroiColorPrincipal','#003B5C'),
           '[COLOR SECUNDARIO]': docroiValue('docroiColorSecundario','#D8ECF8'),
           '[DATOS DE CONTACTO]': docroiValue('docroiContacto','[DATOS DE CONTACTO]'),
           '[EMAIL RGPD]': docroiValue('docroiEmail','[EMAIL RGPD]'),
           '[URL GOOGLE MAPS]': docroiValue('docroiMaps','[URL GOOGLE MAPS]'),
-          '[LOGO]': adjuntaLogo ? 'Logo adjunto. ' + docroiValue('docroiLogo','Sin URL adicional.') : docroiValue('docroiLogo','[URL DEL LOGO]'),
-          '[BUYER PERSONA]': adjuntaBuyer ? 'Ficha buyer persona adjunta. Nota: ' + docroiValue('docroiBuyer','[SIN RESUMEN]') : docroiValue('docroiBuyer','[BUYER PERSONA]'),
-          '[PRODUCTO]': adjuntaProducto ? 'Ficha de producto adjunta. Nota: ' + docroiValue('docroiProducto','[SIN RESUMEN]') : docroiValue('docroiProducto','[FICHA DE PRODUCTO]')
+          '[LOGO]': adjuntaLogo ? 'Logo adjunto. Nota o URL adicional: ' + docroiValue('docroiLogo','Sin URL adicional.') : docroiValue('docroiLogo','[URL DEL LOGO]'),
+          '[BUYER PERSONA]': adjuntaBuyer ? 'Ficha buyer persona adjunta. Nota opcional: ' + docroiValue('docroiBuyer','[SIN RESUMEN]') : docroiValue('docroiBuyer','[BUYER PERSONA]'),
+          '[PRODUCTO]': adjuntaProducto ? 'Ficha de producto adjunta. Nota opcional: ' + docroiValue('docroiProducto','[SIN RESUMEN]') : docroiValue('docroiProducto','[FICHA DE PRODUCTO]')
         };
         var prompt = window.docroiBasePrompt;
         Object.keys(data).forEach(function(key){ prompt = prompt.split(key).join(data[key]); });
-        prompt = 'IMPORTANTE PARA ESTA EJECUCIÓN:\nSi el usuario marcó ficha de producto, buyer persona, logo o fotos, espera esos adjuntos en el chat y úsalos como fuente principal. Esta tarea debe crear una FICHA WEB ECOMMERCE de producto, con vista previa si es posible o con HTML completo, e incluir compra, reserva o contacto.\n\n' + prompt;
+        prompt = 'IMPORTANTE PARA ESTA EJECUCIÓN:\nAntes de ejecutar, comprueba el checklist de adjuntos marcado por el usuario. Si marcó ficha de producto, buyer persona, logo o fotos, espera esos adjuntos en el chat y úsalos como fuente principal. Debes crear una FICHA WEB ECOMMERCE de producto como el ejemplo de Juan Valdez, con visor/vista previa en ChatGPT si es posible, o con HTML completo si no lo es, e incluir compra, reserva o contacto.\n\n' + prompt;
         var area = document.getElementById('docroiPromptArea');
         if(area) area.value = prompt;
-        docroiSetStatus('Prompt ecommerce generado. Copia este prompt y súbelo a ChatGPT/Gemini junto con la ficha de producto, buyer persona, logo y fotos marcadas.');
+        docroiSetStatus('Prompt ecommerce generado. Copia este prompt y pégalo en ChatGPT/Gemini junto con los archivos marcados en el checklist.');
         return prompt;
       };
       window.docroiBuildPrompt();
     }
 
-    fetch('connection_03_activos_digitales_pildora_wordpress.txt?v=global-header-product-flow-20260620')
+    fetch('connection_03_activos_digitales_pildora_wordpress.txt?v=ux-checklist-ecommerce-20260620')
       .then(function(response){ if(!response.ok) throw new Error('No se pudo cargar el contenido.'); return response.text(); })
       .then(function(html){
         html = html.replace('<!-- wp:html -->','').replace('<!-- /wp:html -->','');
         html = html
           .replace('Convierte una idea formativa o profesional en un activo digital con estructura, propósito y valor reutilizable. Puedes trabajar pegando la información en el formulario o indicando que adjuntarás la ficha y el logo al conversar con la IA.', 'Convierte una ficha de producto, una ficha de buyer persona, el logo y las fotos del producto en una ficha web ecommerce lista para revisar en ChatGPT/Gemini, con vista previa o HTML completo.')
-          .replace('Rellena los campos, marca si vas a adjuntar buyer persona o logo, genera el prompt personalizado y pégalo en ChatGPT o Gemini junto con esos archivos si has elegido esa opción.', 'Rellena los campos, marca qué archivos subirás al chat, genera el prompt ecommerce y pégalo en ChatGPT o Gemini junto con el logo, la ficha buyer persona, la ficha de producto y las fotos del producto.')
-          .replace('Crear ficha buyer persona →</a>', 'Crear ficha buyer persona →</a><a href="https://connection-04-ficha-de-producto.vercel.app/" target="_blank" rel="noopener" class="docroi-btn docroi-btn-white">Crear ficha de producto →</a>')
-          .replace('Primero define identidad y adjuntos, después buyer persona, y al final contacto. Si no marcas una casilla, el prompt usará lo escrito en los campos.', 'Primero define identidad, después ficha de producto, buyer persona y fotos. Al final añade contacto. Si marcas una casilla, recuerda subir ese archivo en ChatGPT/Gemini junto con el prompt.')
-          .replace('Adjuntaré el logo en el chat de IA<span>El prompt pedirá a la IA que use el archivo de logo adjunto. Si no marcas esto, utilizará la URL del logo.</span>', 'Subiré el logo después a ChatGPT/Gemini junto con este prompt<span>Marca esta opción solo si también vas a subir el archivo del logo en el chat. Si no, deja la casilla vacía y usa una URL.</span>')
-          .replace('Adjuntaré la ficha buyer persona de la píldora 2<span>El prompt pedirá a la IA que analice el documento adjunto. Puedes añadir un resumen breve para orientar.</span>', 'Subiré la ficha buyer persona después junto con este prompt<span>Marca esta opción solo si también vas a subir la ficha de la píldora 2 en ChatGPT/Gemini.</span>');
+          .replace('Rellena los campos, marca si vas a adjuntar buyer persona o logo, genera el prompt personalizado y pégalo en ChatGPT o Gemini junto con esos archivos si has elegido esa opción.', 'Rellena solo lo necesario, genera el prompt y pégalo en ChatGPT/Gemini. Después sube los archivos que hayas marcado en el checklist antes de ejecutar.')
+          .replace('Crear ficha buyer persona →</a>', 'Crear ficha buyer persona →</a><a href="'+PRODUCT_URL+'" target="_blank" rel="noopener" class="docroi-btn docroi-btn-white">Crear ficha de producto →</a>')
+          .replace('Primero define identidad y adjuntos, después buyer persona, y al final contacto. Si no marcas una casilla, el prompt usará lo escrito en los campos.', 'Primero rellena identidad. Después añade producto y buyer persona solo si no vas a adjuntarlos. Al final genera el prompt y marca el checklist de documentos que subirás antes de ejecutar.')
+          .replace('Adjuntaré el logo en el chat de IA<span>El prompt pedirá a la IA que use el archivo de logo adjunto. Si no marcas esto, utilizará la URL del logo.</span>', 'Logo de marca<span>Subiré el archivo de logo al chat.</span>')
+          .replace('Adjuntaré la ficha buyer persona de la píldora 2<span>El prompt pedirá a la IA que analice el documento adjunto. Puedes añadir un resumen breve para orientar.</span>', 'Buyer persona<span>Subiré la ficha de buyer persona de la píldora 2.</span>');
         document.open();
         document.write('<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Connection 03 · Generación de activos digitales</title></head><body style="margin:0">' + html + '</body></html>');
         document.close();
