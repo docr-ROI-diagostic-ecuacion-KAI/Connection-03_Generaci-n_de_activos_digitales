@@ -21,7 +21,7 @@
     function addGlobalHeader(){
       if(document.querySelector('.docroi-global-header')) return;
       var css = document.createElement('style');
-      css.textContent = 'html{scroll-behavior:smooth}.docroi-global-header{position:sticky;top:0;z-index:999;background:#03060C;border-bottom:1px solid rgba(255,255,255,.12)}.docroi-global-header .docroi-wrap{max-width:1120px;margin:0 auto;width:calc(100% - 40px);display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 0}.docroi-global-brand{display:inline-flex;align-items:center;text-decoration:none}.docroi-global-brand img{width:188px;height:54px;object-fit:contain;display:block}.docroi-header-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap}.docroi-header-actions a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0 14px;border:1px solid rgba(255,255,255,.18);border-radius:8px;color:#F3F4F6!important;text-decoration:none!important;font-size:14px;font-weight:900;line-height:1;white-space:nowrap}.docroi-header-actions .docroi-header-cta{background:#fff!important;color:#0B0F19!important;border-color:#fff!important;padding:0 18px}.docroi-section,.docroi-hero,#constructor-prompt{scroll-margin-top:96px}.docroi-c03 .docroi-grid{align-items:start}.docroi-resource-link{display:inline-flex;margin-top:8px;color:#003B5C!important;font-size:12px;font-weight:900;text-decoration:underline;text-underline-offset:3px}.docroi-result-objective{background:#0B0F19;color:#fff;border:1px solid rgba(255,255,255,.10);border-radius:18px;padding:18px;margin:0 0 14px;box-shadow:0 18px 42px rgba(11,15,25,.16)}.docroi-result-objective strong{display:block;color:#fff!important;font-size:13px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}.docroi-result-objective p{margin:0;color:#D8ECF8!important;font-size:14px;line-height:1.6;font-weight:750}.docroi-product-alert{display:none}.docroi-product-priority{border:1px solid #D8ECF8!important;box-shadow:0 16px 34px rgba(0,59,92,.08)!important}.docroi-commitment{background:#EAF6FB;border:1px solid #D8ECF8;border-radius:18px;padding:16px;margin-top:14px}.docroi-commitment h3{margin:0 0 6px!important;font-size:15px!important;line-height:1.25!important;color:#003B5C!important}.docroi-commitment p{margin:0 0 12px;color:#35506A;font-size:13px;line-height:1.5;font-weight:750}.docroi-commitment-grid{display:grid;gap:10px}.docroi-commitment-item{display:flex!important;align-items:flex-start!important;gap:10px!important;background:#fff!important;border:1px solid #CFE8F7!important;border-radius:12px!important;padding:12px!important;font-size:13px!important;line-height:1.35!important;font-weight:900!important;cursor:pointer!important}.docroi-commitment-item input{width:18px!important;height:18px!important;margin:1px 0 0!important;accent-color:#003B5C!important;flex:0 0 auto!important}.docroi-commitment-item span{display:block!important;margin-top:2px!important;color:#4B5870!important;font-size:12px!important;line-height:1.35!important;font-weight:650!important}.docroi-optional-hint{display:block;margin-top:8px;color:#64748B;font-size:12px;line-height:1.45;font-weight:700}.docroi-compact-note{background:#EAF6FB;border:1px solid #D8ECF8;border-radius:14px;padding:13px 14px;color:#003B5C;font-size:13px;line-height:1.55;font-weight:800;margin:0 0 14px}.docroi-compact-note a{color:#003B5C!important;font-weight:900}.docroi-prompt-frame{position:sticky;top:104px}@media(min-width:860px){.docroi-commitment-grid{grid-template-columns:1fr 1fr}}@media(max-width:900px){.docroi-prompt-frame{position:static}.docroi-result-objective{margin-top:18px}}@media(max-width:720px){.docroi-global-header .docroi-wrap{align-items:flex-start;flex-direction:column}.docroi-header-actions{width:100%;justify-content:flex-start}.docroi-header-actions a{flex:1 1 auto}.docroi-header-actions .docroi-header-cta{flex-basis:100%}.docroi-global-brand img{width:160px;height:46px}.docroi-commitment-grid{grid-template-columns:1fr}.docroi-result-objective,.docroi-commitment{border-radius:14px;padding:14px}}';
+      css.textContent = 'html{scroll-behavior:smooth}.docroi-global-header{position:sticky;top:0;z-index:999;background:#03060C;border-bottom:1px solid rgba(255,255,255,.12)}.docroi-global-header .docroi-wrap{max-width:1120px;margin:0 auto;width:calc(100% - 40px);display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 0}.docroi-global-brand{display:inline-flex;align-items:center;text-decoration:none}.docroi-global-brand img{width:188px;height:54px;object-fit:contain;display:block}.docroi-header-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap}.docroi-header-actions a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0 14px;border:1px solid rgba(255,255,255,.18);border-radius:8px;color:#F3F4F6!important;text-decoration:none!important;font-size:14px;font-weight:900;line-height:1;white-space:nowrap}.docroi-header-actions .docroi-header-cta{background:#fff!important;color:#0B0F19!important;border-color:#fff!important;padding:0 18px}.docroi-section,.docroi-hero,#constructor-prompt{scroll-margin-top:96px}.docroi-c03 .docroi-grid{align-items:start}.docroi-right-rail{display:grid;gap:14px;align-content:start;position:sticky;top:104px}.docroi-right-rail .docroi-prompt-frame{position:static!important;margin:0}.docroi-resource-link{display:inline-flex;margin-top:8px;color:#003B5C!important;font-size:12px;font-weight:900;text-decoration:underline;text-underline-offset:3px}.docroi-result-objective{background:#0B0F19;color:#fff;border:1px solid rgba(255,255,255,.10);border-radius:8px;padding:18px;margin:0;box-shadow:0 18px 42px rgba(11,15,25,.16)}.docroi-result-objective strong{display:block;color:#fff!important;font-size:13px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}.docroi-result-objective p{margin:0;color:#D8ECF8!important;font-size:14px;line-height:1.6;font-weight:750}.docroi-product-alert{display:none}.docroi-product-priority{border:1px solid #D8ECF8!important;box-shadow:0 16px 34px rgba(0,59,92,.08)!important}.docroi-commitment{background:#EAF6FB;border:1px solid #D8ECF8;border-radius:8px;padding:16px;margin:0}.docroi-commitment h3{margin:0 0 6px!important;font-size:15px!important;line-height:1.25!important;color:#003B5C!important}.docroi-commitment p{margin:0 0 12px;color:#35506A;font-size:13px;line-height:1.5;font-weight:750}.docroi-commitment-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.docroi-commitment-item{display:flex!important;align-items:flex-start!important;gap:10px!important;background:#fff!important;border:1px solid #CFE8F7!important;border-radius:8px!important;padding:12px!important;font-size:13px!important;line-height:1.35!important;font-weight:900!important;cursor:pointer!important}.docroi-commitment-item input{width:18px!important;height:18px!important;margin:1px 0 0!important;accent-color:#003B5C!important;flex:0 0 auto!important}.docroi-commitment-item span{display:block!important;margin-top:2px!important;color:#4B5870!important;font-size:12px!important;line-height:1.35!important;font-weight:650!important}.docroi-optional-hint{display:block;margin-top:8px;color:#64748B;font-size:12px;line-height:1.45;font-weight:700}.docroi-compact-note{background:#EAF6FB;border:1px solid #D8ECF8;border-radius:8px;padding:13px 14px;color:#003B5C;font-size:13px;line-height:1.55;font-weight:800;margin:0 0 14px}.docroi-compact-note a{color:#003B5C!important;font-weight:900}.docroi-prompt-box{min-height:420px!important}.docroi-prompt-frame{border-radius:8px!important}.docroi-prompt-frame .docroi-btn{border-radius:999px!important}@media(max-width:960px){.docroi-right-rail{position:static}.docroi-commitment-grid{grid-template-columns:1fr}}@media(max-width:720px){.docroi-global-header .docroi-wrap{align-items:flex-start;flex-direction:column}.docroi-header-actions{width:100%;justify-content:flex-start}.docroi-header-actions a{flex:1 1 auto}.docroi-header-actions .docroi-header-cta{flex-basis:100%}.docroi-global-brand img{width:160px;height:46px}.docroi-result-objective,.docroi-commitment{padding:14px}.docroi-prompt-box{min-height:360px!important}}';
       document.head.appendChild(css);
       var header = document.createElement('header');
       header.className = 'docroi-global-header';
@@ -41,6 +41,18 @@
         event.preventDefault();
         target.scrollIntoView({behavior:'smooth',block:'start'});
       });
+    }
+
+    function ensureRightRail(){
+      var frame = document.querySelector('.docroi-prompt-frame');
+      if(!frame) return null;
+      var rail = frame.closest('.docroi-right-rail');
+      if(rail) return rail;
+      rail = document.createElement('div');
+      rail.className = 'docroi-right-rail';
+      frame.parentNode.insertBefore(rail, frame);
+      rail.appendChild(frame);
+      return rail;
     }
 
     function setOptionLabel(id, title, help){
@@ -72,12 +84,12 @@
     }
 
     function buildAttachmentChecklist(){
-      var promptFrame = document.querySelector('.docroi-prompt-frame');
-      if(!promptFrame || document.querySelector('.docroi-commitment')) return;
+      var rail = ensureRightRail();
+      if(!rail || document.querySelector('.docroi-commitment')) return;
       var commitment = document.createElement('div');
       commitment.className = 'docroi-commitment';
       commitment.innerHTML = '<h3>Me comprometo a incluir estos archivos antes de ejecutar</h3><p>Marca solo lo que vas a subir a ChatGPT/Gemini junto con este prompt.</p><div class="docroi-commitment-grid"></div>';
-      promptFrame.insertAdjacentElement('afterend', commitment);
+      rail.appendChild(commitment);
       var grid = commitment.querySelector('.docroi-commitment-grid');
       [
         ['docroiAdjuntaProducto','Ficha de producto','La ficha de la píldora 4 será la fuente principal.'],
@@ -91,16 +103,18 @@
     }
 
     function addObjectiveAbovePrompt(){
+      var rail = ensureRightRail();
       var frame = document.querySelector('.docroi-prompt-frame');
-      if(!frame || document.querySelector('.docroi-result-objective')) return;
+      if(!rail || !frame || document.querySelector('.docroi-result-objective')) return;
       var objective = document.createElement('div');
       objective.className = 'docroi-result-objective';
       objective.innerHTML = '<strong>Objetivo del resultado</strong><p>Crear una ficha de producto web ecommerce, similar en ambición al ejemplo de Juan Valdez, con visor o vista previa en ChatGPT si la plataforma lo permite, y con llamada clara a comprar, reservar o contactar.</p>';
-      frame.insertAdjacentElement('beforebegin', objective);
+      rail.insertBefore(objective, frame);
     }
 
     function injectProductFichaFlow(){
       addGlobalHeader();
+      ensureRightRail();
       var buyerCheckbox = document.getElementById('docroiAdjuntaBuyer');
       if(buyerCheckbox && !document.getElementById('docroiProducto')){
         var buyerGroup = buyerCheckbox.closest('.docroi-group');
@@ -156,7 +170,7 @@
       window.docroiBuildPrompt();
     }
 
-    fetch('connection_03_activos_digitales_pildora_wordpress.txt?v=ux-checklist-ecommerce-20260620')
+    fetch('connection_03_activos_digitales_pildora_wordpress.txt?v=prompt-rail-mockup-20260620')
       .then(function(response){ if(!response.ok) throw new Error('No se pudo cargar el contenido.'); return response.text(); })
       .then(function(html){
         html = html.replace('<!-- wp:html -->','').replace('<!-- /wp:html -->','');
